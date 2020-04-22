@@ -5,7 +5,7 @@
     <script src="https://twitter.github.io/typeahead.js/js/handlebars.js"></script>
     <script>
       // Template for roll results
-      const template = Handlebars.compile("<li>You rolled a {{ value }}</li>")
+      const template = Handlebars.compile("<li>You rolled: <img src=\"img/{{ value }}.png\"></li>")
 
       document.addEventListener('DOMContentLoaded', () => {
           document.querySelector('#roll').onclick = () => {
@@ -23,10 +23,8 @@
     </script>
   </head>
   <body>
-
-    <button id="roll">Roll</button>
     <ul id="rolls">
     </ul>
-
+    <button id="roll">Roll</button>
   </body>
 </html>
